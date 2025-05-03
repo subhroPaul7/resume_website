@@ -6,7 +6,6 @@
     --mainLinkColor-light:#0da2b8;
     --mainBorderColor-light:rgb(218, 218, 218);
     --mainBgColor-light:rgb(249, 250,251);
-    --font-size-base: 1rem;
 }
 
 [data-theme="dark"]{
@@ -23,9 +22,7 @@
     font-family: 'Readex Pro';
     line-height: 1.5em;
     box-sizing: border-box;
-    color: var(--mainTextColor);
-    font-size: var(--font-size-base);
-    
+    color: var(--mainTextColor);    
 }
 
 body{
@@ -84,7 +81,6 @@ li{
     height: 150px;
     object-fit: cover;
     border-radius: 50%; /* This ensures the image is circular */
-    overflow: hidden; /* This ensures that if the image is too large, it will be cropped properly */
 }
 
 #email{
@@ -133,7 +129,7 @@ li{
     background-color: var(--mainBgColor);
     width: calc(20% - 1.5em); /* 5 cards per row */
     text-align: center;
-    min-width: 120px; /* Prevents shrinking too much on small screens */
+    min-width: 96px; /* Prevents shrinking too much on small screens */
 }
 
 .tech-logo {
