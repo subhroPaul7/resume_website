@@ -6,7 +6,7 @@
     --mainLinkColor-light:#0da2b8;
     --mainBorderColor-light:rgb(218, 218, 218);
     --mainBgColor-light:rgb(249, 250,251);
-    --font-size-base: 1rem;
+    /* --font-size-base: 1rem; */
 }
 
 [data-theme="dark"]{
@@ -24,7 +24,7 @@
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
-    font-size: var(--font-size-base);
+    /* font-size: var(--font-size-base); */
     
 }
 
@@ -210,6 +210,6 @@ li{
 }
 @media(max-width: 900px) {
     .card--techstack {
-        width: calc(50% - 1.5em); /* 2 cards per row for medium screens */
+        width: calc(33% - 1.5em); /* 3 cards per row for medium screens */
     }
 }
