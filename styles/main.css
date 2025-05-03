@@ -77,11 +77,12 @@ li{
     line-height: 1em;
 }
 
-#profile-pic{
+#profile-pic {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50%; /* This ensures the image is circular */
+    overflow: hidden; /* This ensures that if the image is too large, it will be cropped properly */
 }
 
 #email{
@@ -112,18 +113,36 @@ li{
     list-style: none;
 }
 
-#wrapper--techstack__items{
+#wrapper--techstack__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
-    font-size: 0.9em;
+    gap: 1.5em;
+    justify-content: center;
 }
 
-.card--techstack{
+.card--techstack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
     border: 1px solid var(--mainBorderColor);
     border-radius: 5px;
-    padding: 0.5em 1em;
-    align-items: center;
+    background-color: var(--mainBgColor);
+    width: 150px;
+    text-align: center;
+}
+
+.tech-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card--techstack span {
+    font-size: 1em;
+    font-weight: 500;
 }
 
 .card--project{
