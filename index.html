@@ -48,13 +48,38 @@
             <section class="section--page">
                 <h2>Education & Qualifications</h2>
                 <ul id="qualifications--list">
-                    <li>💼 1 year experience as a Machine Learning Engineer (full-time)</li>
+                    <li id="experience"></li>
                     <li>🎓 B.Tech in Mechanical Engineering (2020–2024) from IIEST, Shibpur</li>
                     <li>🧠 Strong background in Python, LLMs & LangChain</li>
                     <li>🛠️ Experience with RAG pipelines, OCR, and knowledge graphs</li>
                     <li>👨‍💻 Internship at PwC India in ML and Data Analytics</li>
                     <li>📝 Authored technical articles on Python, Machine Learning, and Deep Learning for GeeksforGeeks</li>
                 </ul>
+                
+                <script>
+                const startDate = new Date("2024-06-17");
+                const today = new Date();
+                
+                let months = (today.getFullYear() - startDate.getFullYear()) * 12;
+                months += today.getMonth() - startDate.getMonth();
+                
+                const years = Math.floor(months / 12);
+                const remainingMonths = months % 12;
+                
+                let experienceText = "";
+                
+                if (years > 0) {
+                    experienceText += years + " year" + (years > 1 ? "s" : "");
+                }
+                
+                if (remainingMonths > 0) {
+                    if (experienceText !== "") experienceText += " ";
+                    experienceText += remainingMonths + " month" + (remainingMonths > 1 ? "s" : "");
+                }
+                
+                document.getElementById("experience").innerHTML =
+                    `💼 ${experienceText} experience as a Machine Learning Engineer (full-time)`;
+                </script>
 
             </section>
 
